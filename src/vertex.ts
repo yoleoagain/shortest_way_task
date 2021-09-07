@@ -31,10 +31,10 @@ export function Vertex({ ctx, x = 0, y = 0, i, r = 25, nearest = [] } : VertexOp
     ctx.lineWidth = 0
     ctx.strokeStyle = '#222230'
     ctx.stroke()
-    ctx.fillStyle = '#5555'
+    ctx.fillStyle = '#000000'
     ctx.textBaseline = 'top'
     ctx.font = '16px serif'
-    ctx.fillText(String(this.i), this.x, this.y)
+    ctx.fillText(String(this.i), this.x - 7.5, this.y - 6)
   }
 
   this.render()
