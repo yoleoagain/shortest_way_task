@@ -1,0 +1,60 @@
+:root {
+    /* Colors */
+    --bgMain: #4f4c59;
+    --bgPrimary: #393740;
+    --bgAccent: #222230;
+
+    /* Gaps */
+    --gapQuarter: 4px;
+    --gapHalf: 8px;
+    --gapHalfH: 8px;
+}
+
+body{
+    font-family: "Droid Sans Mono";
+    color: #c5c5c7;
+    padding: 0;
+    margin: 0;
+}
+
+.bg_main{ background: var(--bgMain) }
+.bg_primary{ background: var(--bgPrimary) }
+.bg_accent{ background: var(--bgAccent) }
+
+.gapHalf{ padding: var(--gapHalf) }
+.gapHalfH{ padding: 0 var(--gapHalfH) }
+
+canvas{
+    width: calc(100vw - 200px);
+    height: 100vh;
+}
+
+.tools-container{
+    width: 200px;
+}
+
+.control{
+    display: flex;
+    flex-direction: column;
+    padding: var(--gapHalf);
+}
+
+.control label{
+    padding: var(--gapQuarter);
+}
+
+.container{
+    display: flex;
+}
+
+.tools-container h1{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    height: 40px;
+    margin: 0;
+    padding-top: 20px;
+}
