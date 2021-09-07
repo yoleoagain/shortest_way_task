@@ -43,7 +43,7 @@ export function CreateScene(this: SceneContext, canvas: HTMLCanvasElement):Scene
         const vertexes = range(this.pointsCount)
           //@ts-ignore
           .map(i => new Vertex({
-            x: randInt(0, canvas.width), y: randInt(0, canvas.height), r: 20, ctx }
+            x: randInt(0, canvas.width), y: randInt(0, canvas.height), i, r: 20, ctx }
         ))
         this.elements = [...vertexes]
         this.elements.forEach(e => { e.render() })

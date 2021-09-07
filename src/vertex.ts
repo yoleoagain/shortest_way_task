@@ -10,13 +10,16 @@ export interface VertexOptions {
   x: number
   y: number
   r?:  number
+  i: number
   nearest?: VertexT[]
 }
 
-export function Vertex({ ctx, x = 0, y = 0, r = 25, nearest = [] } : VertexOptions){
+export function Vertex({ ctx, x = 0, y = 0, i, r = 25, nearest = [] } : VertexOptions){
   this.x = x
   this.y = y
   this.r = r
+  this.i = i
+
   this.nearest = nearest
 
   this.render = () => {
@@ -28,6 +31,10 @@ export function Vertex({ ctx, x = 0, y = 0, r = 25, nearest = [] } : VertexOptio
     ctx.lineWidth = 0
     ctx.strokeStyle = '#222230'
     ctx.stroke()
+    ctx.fillStyle = '#5555'
+    ctx.textBaseline = 'top'
+    ctx.font = '16px serif'
+    ctx.fillText(String(this.i), this.x, this.y)
   }
 
   this.render()
